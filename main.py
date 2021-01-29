@@ -1,4 +1,6 @@
 import pygame
+
+from stats import GameStats
 from settings import Settings
 from button import Button
 
@@ -15,6 +17,9 @@ def run():
     
     # Создание кнопки Play
     play_button = Button(ai_settings, screen, "Play")
+    
+    # Создание экземпляра класса для хранения статистики
+    stats = GameStats(ai_settings)
     
     pygame.display.flip()
     
