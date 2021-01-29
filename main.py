@@ -1,4 +1,6 @@
 import pygame
+from settings import Settings
+from button import Button
 
 def run():
     """
@@ -7,8 +9,13 @@ def run():
     
     # Инициализация
     pygame.init()
-    screen = pygame.display.set_mode((300, 300))
+    ai_settings = Settings()
+    screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Space battle")
+    
+    # Создание кнопки Play
+    play_button = Button(ai_settings, screen, "Play")
+    
     pygame.display.flip()
     
     # Проверка на выход из игры
