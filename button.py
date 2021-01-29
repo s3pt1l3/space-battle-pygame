@@ -1,12 +1,11 @@
 import pygame.font
 
 class Button():
-
+    """
+    Класс, описывающий кнопку
+    """
+    
     def __init__(self, ai_settings, screen, msg):
-        """
-        Класс, описывающий кнопку
-        """
-        
         self.screen = screen
         self.screen_rect = screen.get_rect()
         self.width, self.height = 200, 50
