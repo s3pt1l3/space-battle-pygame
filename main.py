@@ -3,6 +3,7 @@ import pygame
 from stats import GameStats
 from settings import Settings
 from button import Button
+from ship import Ship
 
 def run():
     """
@@ -20,6 +21,9 @@ def run():
     
     # Создание экземпляра класса для хранения статистики
     stats = GameStats(ai_settings)
+    
+    # Создание корабля
+    ship = Ship(ai_settings, screen)
     
     pygame.display.flip()
     
