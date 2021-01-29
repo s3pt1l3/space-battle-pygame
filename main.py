@@ -4,6 +4,7 @@ from stats import GameStats
 from settings import Settings
 from button import Button
 from ship import Ship
+from scoreboard import Scoreboard
 
 def run():
     """
@@ -19,8 +20,9 @@ def run():
     # Создание кнопки Play
     play_button = Button(ai_settings, screen, "Play")
     
-    # Создание экземпляра класса для хранения статистики
+    # Создание экземпляров классов для хранения статистики и очков
     stats = GameStats(ai_settings)
+    sb = Scoreboard(ai_settings, screen, stats)
     
     # Создание корабля
     ship = Ship(ai_settings, screen)
