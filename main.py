@@ -22,6 +22,10 @@ def run():
     # Создание кнопки Play
     play_button = Button(ai_settings, screen, "Play")
     
+    # Музыка
+    music = pygame.mixer.music.load('music/music.mp3')
+    pygame.mixer.music.play(-1)
+    
     # Создание экземпляров классов для хранения статистики и очков
     stats = GameStats(ai_settings)
     sb = Scoreboard(ai_settings, screen, stats)
